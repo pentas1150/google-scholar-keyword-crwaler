@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
 require('dotenv').config();
 
 let paperTitle = [];
@@ -25,7 +26,7 @@ const getHtml = async(page_number, search_string, start_year) => {
 
 const getPaperTitle  = async(search, year) => {
     try {
-        for(let i=1; true; ++i) {
+        for(let i=1; i<=Number(process.env.END_PAGE); ++i) {
             const html = await getHtml(i, search, year);
 
             const $ = cheerio.load(html.data);
@@ -66,7 +67,7 @@ const runApp = async() => {
         return b.count - a.count;
     });
     keywordCount.forEach((elem) => {
-        console.log(elem);
+        fs.writeFileSync('./result.txt', `${elem.keyword} : ${elem.count}`, 'utf8');
     });
 };
 
