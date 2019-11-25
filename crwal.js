@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+require('dotenv').config();
 
 let paperTitle = [];
 let keywordCount = [];
@@ -25,7 +26,6 @@ const getHtml = async(page_number, search_string, start_year) => {
 const getPaperTitle  = async(search, year) => {
     try {
         for(let i=1; true; ++i) {
-            console.log(i);
             const html = await getHtml(i, search, year);
 
             const $ = cheerio.load(html.data);
@@ -60,7 +60,7 @@ const wordCount = () => {
 };
 
 const runApp = async() => {
-    await getPaperTitle("energy harvesting sensor", 2015);
+    await getPaperTitle(process.env.SEARCH, process.env.START_YEAR);
     wordCount();
     keywordCount.sort((a, b) => {
         return b.count - a.count;
