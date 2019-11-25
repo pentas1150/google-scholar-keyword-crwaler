@@ -9,7 +9,7 @@
 ```
 ### 2.2 사용법
 ```
-1. .env 파일 생성 후, SEARCH와 START_YEAR 입력
-=>SEARCH : 검색어, START_YEAR : 시작 연도 설정, 0이면 기간 없음
+1. .env에서 SEARCH와 START_YEAR, END_PAGE 수정
+=>SEARCH : 검색어, START_YEAR : 시작 연도 설정, 0이면 기간 없음, END_PAGE : 1페이지부터 몇 페이지까지 크롤할지 범위 
 2. node crwal로 실행
 ```
