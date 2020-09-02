@@ -38,7 +38,7 @@ const getHtml = async (page_number, search_string, start_year) => {
 
 const getPaperTitle = async (search, year) => {
     try {
-        for (let i = 1; true; ++i) {
+        for (let i = 1; i <= Number(process.env.END_PAGE; ++i) {
             console.log(i);
             const html = await getHtml(i, search, year);
 
