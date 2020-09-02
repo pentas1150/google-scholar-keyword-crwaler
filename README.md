@@ -22,3 +22,5 @@ Beautifulsoup & Selenium으로 해도 해결이 잘안되어 다른 방안을 �
 
 ### 2.3. 실행 결과
 <img src="https://postfiles.pstatic.net/MjAyMDA5MDJfMjkg/MDAxNTk5MDI1NTAzNDE3.f_IRjA25LpCGuMBWmPxOG65iqgRP1_WxcHqJDwMV-CUg.EQWMfyrXS6qx2rWkdOz9XRy80P9gphDHJmauSnchLsQg.PNG.ffanys_/스크린샷_2020-09-02_오후_2.40.37.png?type=w966" height="800px">
+
+Project URL: https://github.com/pentas1150/google-scholar-keyword-crwaler
